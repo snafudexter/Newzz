@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bubbles.bhavya.newzz.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.bubbles.bhavya.newzz.CustomScrollView
+        android:id="@+id/scrollMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+    </com.bubbles.bhavya.newzz.CustomScrollView>
+
+    <LinearLayout
+        android:id="@+id/filterMenuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="#00ffffff"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="90dp"
+        android:paddingRight="5dp"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/filterMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="false"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Sources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <CheckBox
+                android:id="@+id/chkTOI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentStart="false"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:text="TOI" />
+
+            <CheckBox
+                android:id="@+id/chkBBC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:text="BBC" />
+
+            <CheckBox
+                android:id="@+id/chkOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/checkBox2"
+                android:layout_below="@+id/checkBox2"
+                android:checked="true"
+                android:text="Other" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Categories" />
+
+            <CheckBox
+                android:id="@+id/chkIndia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/checkBox3"
+                android:layout_below="@+id/checkBox3"
+                android:checked="true"
+                android:text="India" />
+
+            <CheckBox
+                android:id="@+id/chkWorld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox4"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:focusable="false"
+                android:text="World" />
+
+            <CheckBox
+                android:id="@+id/chkScience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox5"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:text="Science" />
+
+            <CheckBox
+                android:id="@+id/chkEntertainment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox6"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:text="Entertainment" />
+
+            <CheckBox
+                android:id="@+id/chkSports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox7"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:text="Sports" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Duration" />
+
+            <SeekBar
+                android:id="@+id/sb_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="20"
+                android:progress="5" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="5 days" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
